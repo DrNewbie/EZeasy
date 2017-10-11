@@ -1,5 +1,25 @@
-table.insert(tweak_data.difficulties, 'EZeasy')
-table.insert(tweak_data.difficulty_level_locks, 100)
+tweak_data.difficulties = {
+	"easy",
+	"normal",
+	"hard",
+	"overkill",
+	"overkill_145",
+	"easy_wish",
+	"overkill_290",
+	"sm_wish",
+	"EZeasy"
+}
+tweak_data.difficulty_level_locks = {
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	80,
+	80,
+	80
+}
 tweak_data.difficulty_name_ids.EZeasy = "menu_difficulty_EZeasy"
 
 function TweakData:set_difficulty()
