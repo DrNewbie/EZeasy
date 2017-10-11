@@ -1,0 +1,127 @@
+{
+	"name": "EZ",
+	"description": "EZ",
+	"author": "Dr_Newbie",
+	"contact": "http://modwork.shop/0",
+	"version": "1",
+	"priority": 1000,
+	"blt_version": 2,
+	"pre_hooks": [
+		{
+			"hook_id": "lib/managers/menumanager",
+			"script_path": "Lua/menumanager.lua"
+		},
+		{
+			"hook_id": "lib/tweak_data/tweakdata",
+			"script_path": "Lua/tweakdata_pre.lua"
+		}
+	],
+	"post_hooks": [
+		{
+			"hook_id": "lib/tweak_data/tweakdata",
+			"script_path": "Lua/tweakdata_post.lua"
+		}
+	],
+	"hooks": [
+		{
+			"hook_id": "lib/managers/localizationmanager",
+			"script_path": "Base.lua"
+		},
+		{
+			"hook_id": "lib/tweak_data/guitweakdata",
+			"script_path": "Lua/guitweakdata.lua"
+		},
+		{
+			"hook_id": "lib/managers/mission/elementpointofnoreturn",
+			"script_path": "Lua/elementpointofnoreturn.lua"
+		},
+		{
+			"hook_id": "lib/managers/mission/elementfilter",
+			"script_path": "Lua/elementfilter.lua"
+		},
+		{
+			"hook_id": "lib/managers/butlermirroringmanager",
+			"script_path": "Lua/butlermirroringmanager.lua"
+		},
+		{
+			"hook_id": "lib/tweak_data/achievementstweakdata",
+			"script_path": "Lua/achievementstweakdata.lua"
+		},
+		{
+			"hook_id": "lib/utils/dev/tools/worldeditor",
+			"script_path": "Lua/worldeditor.lua"
+		},
+		{
+			"hook_id": "lib/network/matchmaking/networkaccountsteam",
+			"script_path": "Lua/networkaccountsteam.lua"
+		},
+		{
+			"hook_id": "lib/tweak_data/moneytweakdata",
+			"script_path": "Lua/moneytweakdata.lua"
+		},
+		{
+			"hook_id": "lib/managers/menu/ingamecontractgui",
+			"script_path": "Lua/ingamecontractgui.lua"
+		},
+		{
+			"hook_id": "lib/tweak_data/tweakdata",
+			"script_path": "Lua/tweakdata.lua"
+		},
+		{
+			"hook_id": "lib/managers/menu/crimenetcontractgui",
+			"script_path": "Lua/crimenetcontractgui.lua"
+		},
+		{
+			"hook_id": "lib/tweak_data/customsafehousetweakdata",
+			"script_path": "Lua/customsafehousetweakdata.lua"
+		},
+		{
+			"hook_id": "lib/managers/moneymanager",
+			"script_path": "Lua/moneymanager.lua"
+		},
+		{
+			"hook_id": "lib/units/beings/player/playerdamage",
+			"script_path": "Lua/playerdamage.lua"
+		},
+		{
+			"hook_id": "lib/tweak_data/charactertweakdata",
+			"script_path": "Lua/charactertweakdata.lua"
+		},
+		{
+			"hook_id": "lib/managers/blackmarketmanager",
+			"script_path": "Lua/blackmarketmanager.lua"
+		},
+		{
+			"hook_id": "lib/managers/menu/contractboxgui",
+			"script_path": "Lua/contractboxgui.lua"
+		},
+		{
+			"hook_id": "lib/tweak_data/tweakdatapd2",
+			"script_path": "Lua/tweakdatapd2.lua"
+		},
+		{
+			"hook_id": "lib/managers/hud/hudmissionbriefing",
+			"script_path": "Lua/hudmissionbriefing.lua"
+		},
+		{
+			"hook_id": "lib/tweak_data/assetstweakdata",
+			"script_path": "Lua/assetstweakdata.lua"
+		},
+		{
+			"hook_id": "lib/managers/hud/hudstageendscreen",
+			"script_path": "Lua/hudstageendscreen.lua"
+		},
+		{
+			"hook_id": "lib/managers/crimenetmanager",
+			"script_path": "Lua/crimenetmanager.lua"
+		},
+		{
+			"hook_id": "lib/managers/experiencemanager",
+			"script_path": "Lua/experiencemanager.lua"
+		},
+		{
+			"hook_id": "lib/managers/hud/hudblackscreen",
+			"script_path": "Lua/hudblackscreen.lua"
+		}
+	]
+}
