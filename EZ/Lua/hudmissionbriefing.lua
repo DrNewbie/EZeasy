@@ -261,13 +261,13 @@ function HUDMissionBriefing:init(hud, workspace)
 		"risk_swat",
 		"risk_fbi",
 		"risk_death_squad",
-		"risk_easy_wish"
+		"risk_easy_wish",
+		"risk_EZeasy"
 	}
 
 	if not Global.SKIP_OVERKILL_290 then
 		table.insert(risks, "risk_murder_squad")
 		table.insert(risks, "risk_sm_wish")
-		table.insert(risks, "risk_EZeasy")
 	end
 
 	for i, name in ipairs(risks) do
