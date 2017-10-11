@@ -28,7 +28,7 @@ function TweakData:set_difficulty()
 end
 
 function TweakData:_set_EZeasy()
-	self:_set_overkill_290()
+	self:_set_sm_wish()
 	self.difficulty_name_id = self.difficulty_name_ids.EZeasy
 end
 

@@ -1,9 +1,9 @@
 {
-	"name": "EZ",
-	"description": "EZ",
+	"name": "EZeasy",
+	"description": "EZ (New Difficutly)",
 	"author": "Dr_Newbie",
-	"contact": "http://modwork.shop/0",
-	"version": "1",
+	"contact": "http://modwork.shop/21061",
+	"version": "2",
 	"priority": 1000,
 	"blt_version": 2,
 	"pre_hooks": [

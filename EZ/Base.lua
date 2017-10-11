@@ -4,3 +4,13 @@ Hooks:Add("LocalizationManagerPostInit", "EZeasy_loc", function(loc)
 		["menu_difficulty_EZeasy"] = "'EZ'"
 	})
 end)
+
+_G.UpdateThisMod = _G.UpdateThisMod or {}
+if UpdateThisMod then
+	UpdateThisMod:Add({
+		mod_id = 'EZeasy',
+		data = {
+			modworkshop_id = 21061
+		}
+	})
+end
