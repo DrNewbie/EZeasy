@@ -5,7 +5,6 @@ Hooks:Add("LocalizationManagerPostInit", "EZeasy_loc", function(loc)
 	})
 end)
 
-_G.UpdateThisMod = _G.UpdateThisMod or {}
 if UpdateThisMod then
 	UpdateThisMod:Add({
 		mod_id = 'EZeasy',
