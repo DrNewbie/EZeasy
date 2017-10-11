@@ -33,3 +33,5 @@ function TweakData:_set_EZeasy()
 end
 
 tweak_data:set_difficulty()
+tweak_data:set_mode()
+tweak_data:digest_tweak_data()
