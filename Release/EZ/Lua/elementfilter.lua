@@ -3,6 +3,9 @@ ElementFilter = ElementFilter or class(CoreMissionScriptElement.MissionScriptEle
 
 function ElementFilter:_check_difficulty()
 	local diff = Global.game_settings and Global.game_settings.difficulty or "hard"
+	if diff == "EZeasy" then
+		diff = "sm_wish"
+	end
 	if self._values.difficulty_easy and diff == "easy" then
 		return true
 	end
@@ -25,7 +28,7 @@ function ElementFilter:_check_difficulty()
 	if is_difficulty_overkill_290 and diff == "overkill_290" then
 		return true
 	end
-	if self._values.difficulty_sm_wish and (diff == "sm_wish" or diff == "EZeasy") then
+	if self._values.difficulty_sm_wish and diff == "sm_wish" then
 		return true
 	end
 	return false
