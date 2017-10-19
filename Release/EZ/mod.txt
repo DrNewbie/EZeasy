@@ -142,6 +142,10 @@
 		{
 			"hook_id": "lib/setups/gamesetup",
 			"script_path": "Lua/gamesetup.lua"
+		},
+		{
+			"hook_id": "lib/units/beings/player/playermovement",
+			"script_path": "Lua/playermovement.lua"
 		}
 	]
 }
