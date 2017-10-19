@@ -7,9 +7,9 @@ end)
 
 if UpdateThisMod then
 	UpdateThisMod:Add({
-		mod_id = 'EZeasy',
+		mod_id = 'EZeasy Release',
 		data = {
-			modworkshop_id = 21093
+			modworkshop_id = 21093,
             dl_url = 'https://github.com/DrNewbie/EZeasy/raw/master/Release/EZ.zip',
             info_url = 'https://raw.githubusercontent.com/DrNewbie/EZeasy/master/Release/EZ/mod.txt'
         }
