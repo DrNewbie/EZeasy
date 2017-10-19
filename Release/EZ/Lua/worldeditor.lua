@@ -1,0 +1,165 @@
+core:import("CoreAiLayer")
+core:import("CoreHeatmapLayer")
+require("lib/units/editor/SpawnEnemyGroupElement")
+require("lib/units/editor/EnemyPreferedElement")
+require("lib/units/editor/AIGraphElement")
+require("lib/units/editor/WaypointElement")
+require("lib/units/editor/SpawnCivilianElement")
+require("lib/units/editor/SpawnCivilianGroupElement")
+require("lib/units/editor/LookAtTrigger")
+require("lib/units/editor/MissionEnd")
+require("lib/units/editor/ObjectiveElement")
+require("lib/units/editor/ConsoleCommandElement")
+require("lib/units/editor/DialogueElement")
+require("lib/units/editor/HeatElement")
+require("lib/units/editor/HintElement")
+require("lib/units/editor/MoneyElement")
+require("lib/units/editor/AiGlobalEventElement")
+require("lib/units/editor/EquipmentElement")
+require("lib/units/editor/AreaMinPoliceForceUnitElement")
+require("lib/units/editor/PlayerStateUnitElement")
+require("lib/units/editor/ActionMessageUnitElement")
+require("lib/units/editor/GameDirectionElement")
+require("lib/units/editor/PressureElement")
+require("lib/units/editor/DangerZoneElement")
+require("lib/units/editor/ScenarioEventElement")
+require("lib/units/editor/KillzoneElement")
+require("lib/units/editor/SpecialObjectiveElement")
+require("lib/units/editor/SpecialObjectiveTriggerElement")
+require("lib/units/editor/SpecialObjectiveGroupElement")
+require("lib/units/editor/PlayerStateTriggerUnitElement")
+require("lib/units/editor/DifficultyElement")
+require("lib/units/editor/BlurZoneElement")
+require("lib/units/editor/AIRemoveElement")
+require("lib/units/editor/FlashlightElement")
+require("lib/units/editor/TeammateCommentElement")
+require("lib/units/editor/FakeAssaultStateElement")
+require("lib/units/editor/WhisperStateElement")
+require("lib/units/editor/DifficultyLevelCheckElement")
+require("lib/units/editor/AwardAchievmentElement")
+require("lib/units/editor/PlayerNumberCheckElement")
+require("lib/units/editor/PointOfNoReturnElement")
+require("lib/units/editor/FadeToBlackElement")
+require("lib/units/editor/AlertTriggerElement")
+require("lib/units/editor/FeedbackElement")
+require("lib/units/editor/ExplosionElement")
+require("lib/units/editor/FilterElement")
+require("lib/units/editor/DisableUnitElement")
+require("lib/units/editor/EnableUnitElement")
+require("lib/units/editor/SmokeGrenadeElement")
+require("lib/units/editor/SetOutlineElement")
+require("lib/units/editor/DisableShoutElement")
+require("lib/units/editor/ExplosionDamageElement")
+require("lib/units/editor/PlayerStyleElement")
+require("lib/units/editor/DropinStateElement")
+require("lib/units/editor/BainStateElement")
+require("lib/units/editor/BlackscreenVariantElement")
+require("lib/units/editor/AccessCameraElement")
+require("lib/units/editor/AIAttentionElement")
+require("lib/units/editor/MissionFilterElement")
+require("lib/units/editor/AIAreaElement")
+require("lib/units/editor/SecurityCameraElement")
+require("lib/units/editor/CarryElement")
+require("lib/units/editor/LootBagElement")
+require("lib/units/editor/JobValueElement")
+require("lib/units/editor/JobStageAlternativeElement")
+require("lib/units/editor/NavObstacleElement")
+require("lib/units/editor/LootSecuredTriggerElement")
+require("lib/units/editor/MandatoryBagsElement")
+require("lib/units/editor/AssetTriggerElement")
+require("lib/units/editor/SpawnDeployableElement")
+require("lib/units/editor/InventoryDummyElement")
+require("lib/units/editor/FilterProfileElement")
+require("lib/units/editor/FleePointElement")
+require("lib/units/editor/InstigatorElement")
+require("lib/units/editor/InstigatorRuleElement")
+require("lib/units/editor/PickupElement")
+require("lib/units/editor/LaserTriggerElement")
+require("lib/units/editor/SpawnGrenadeElement")
+require("lib/units/editor/SpotterElement")
+require("lib/units/editor/SpawnGageAssignmentElement")
+require("lib/units/editor/PrePlanningElement")
+require("lib/units/editor/CinematicCameraElement")
+require("lib/units/editor/CharacterTeamElement")
+require("lib/units/editor/TeamRelationElement")
+require("lib/units/editor/SlowMotionElement")
+require("lib/units/editor/InteractionElement")
+require("lib/units/editor/CharacterSequenceElement")
+require("lib/units/editor/ExperienceElement")
+require("lib/units/editor/ModifyPlayerElement")
+require("lib/units/editor/StatisticsElement")
+require("lib/units/editor/StatisticsJobsElement")
+require("lib/units/editor/StatisticsContactElement")
+require("lib/units/editor/GameEventElement")
+require("lib/units/editor/VariableElement")
+require("lib/units/editor/TeamAICommandsElement")
+require("lib/units/editor/EnableSoundEnvironmentElement")
+require("lib/units/editor/CheckDLCElement")
+require("lib/units/editor/UnitDamageTriggerElement")
+require("lib/units/editor/StopwatchElement")
+require("lib/units/editor/PlayerCharacterElement")
+require("lib/units/editor/RandomInstanceElement")
+require("lib/units/editor/MissionLoadDelayedElement")
+require("lib/units/editor/MissionUnloadStaticElement")
+require("lib/units/editor/ChangeVanSkinElement")
+require("lib/units/editor/CustomSafehouseElement")
+require("lib/units/editor/LootPileUnitElement")
+require("lib/units/editor/TangoElement")
+require("lib/units/editor/InvulnerableElement")
+require("lib/units/editor/CharacterDamageTriggerElement")
+require("lib/units/editor/AIForceAttentionElement")
+require("lib/units/editor/AIForceAttentionOperatorElement")
+require("lib/units/editor/SideJobElement")
+require("lib/units/editor/SpawnPlayerElement")
+require("lib/units/editor/EnemyDummyTrigger")
+require("lib/units/editor/SpawnEnemyElement")
+require("lib/units/editor/MotionpathMarkerElement")
+require("lib/units/editor/VehicleTriggerUnitElement")
+require("lib/units/editor/VehicleOperatorUnitElement")
+require("lib/units/editor/SpawnVehicleElement")
+require("lib/units/editor/EnvironmentOperatorElement")
+require("lib/utils/dev/tools/InventoryIconCreator")
+
+WorldEditor = WorldEditor or class(CoreEditor)
+
+function WorldEditor:_init_mission_difficulties()
+	self._mission_difficulties = {
+		{
+			"easy",
+			"Easy"
+		},
+		{
+			"normal",
+			"Normal"
+		},
+		{
+			"hard",
+			"Hard"
+		},
+		{
+			"overkill",
+			"Very Hard"
+		},
+		{
+			"overkill_145",
+			"Overkill"
+		},
+		{
+			"easy_wish",
+			"Easy Wish"
+		},
+		{
+			"overkill_290",
+			"Death Wish"
+		},
+		{
+			"sm_wish",
+			"SM Wish"
+		},
+		{
+			"EZeasy",
+			"EZ"
+		}
+	}
+	self._mission_difficulty = "normal"
+end
