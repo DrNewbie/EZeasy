@@ -10,7 +10,7 @@ if UpdateThisMod then
 		mod_id = 'EZeasy',
 		data = {
 			modworkshop_id = 0
-            dl_url = 'https://github.com/DrNewbie/BotArmorSkins/raw/master/Bot%20Armor%20Skins.zip',
+            dl_url = 'https://github.com/DrNewbie/EZeasy/raw/master/Release/EZ.zip',
             info_url = 'https://raw.githubusercontent.com/DrNewbie/EZeasy/master/Release/EZ/mod.txt'
         }
 	})
